@@ -1,5 +1,6 @@
-package com.tcs.demo;
+package com.tcs.demo.controller;
 
+import com.tcs.demo.HelloService;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

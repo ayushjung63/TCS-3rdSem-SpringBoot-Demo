@@ -1,9 +1,26 @@
-package com.tcs.demo;
+package com.tcs.demo.entity;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "student")
 public class Student {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
     private String name;
     private String faculty;
     private String section;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
