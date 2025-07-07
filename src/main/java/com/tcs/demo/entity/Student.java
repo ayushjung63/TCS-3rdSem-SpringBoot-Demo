@@ -3,7 +3,6 @@ package com.tcs.demo.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "student")
 public class Student {
 
     @Id
@@ -11,9 +10,10 @@ public class Student {
     private Integer id;
 
     private String name;
-    private String faculty;
     private String section;
 
+    @ManyToOne
+    private Faculty faculty;
     public Integer getId() {
         return id;
     }
@@ -30,11 +30,11 @@ public class Student {
         this.name = name;
     }
 
-    public String getFaculty() {
+    public Faculty getFaculty() {
         return faculty;
     }
 
-    public void setFaculty(String faculty) {
+    public void setFaculty(Faculty faculty) {
         this.faculty = faculty;
     }
 
