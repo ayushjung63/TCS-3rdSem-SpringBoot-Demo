@@ -14,6 +14,11 @@ public class Student {
 
     @ManyToOne
     private Faculty faculty;
+
+    // 20 other properties
+
+    // custom format
+
     public Integer getId() {
         return id;
     }
